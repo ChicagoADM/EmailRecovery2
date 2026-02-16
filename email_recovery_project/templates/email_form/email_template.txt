@@ -1,0 +1,24 @@
+Заявка на {{ request.get_action_display }} электронной почты ЕПС  № {{ request.request_number }}
+==================================================
+Дата создания: {{ request.created_at|date:"d.m.Y H:i" }}
+
+ДЕЙСТВИЕ: {{ request.get_action_display }}
+{% if request.reason %}ПРИЧИНА: {{ request.reason }}{% endif %}
+
+ОРГАНИЗАЦИЯ:
+- Орган власти: {{ request.authority }}
+- Учреждение: {{ request.institution }}
+
+ЗАЯВИТЕЛЬ:
+- ФИО: {{ request.last_name }} {{ request.first_name }} {{ request.patronymic }}
+- Отдел: {{ request.department }}
+- Должность: {{ request.position }}
+- Телефон: {{ request.phone }}
+
+АДРЕС:
+- {{ request.address }}, корпус {{ request.building }}, кабинет {{ request.office }}
+{% if request.current_email %}
+ТЕКУЩАЯ ПОЧТА: {{ request.current_email }}
+{% endif %}
+
+==================================================
