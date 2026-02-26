@@ -1,0 +1,103 @@
+/* static/css/styles.css */
+
+/* Общие стили */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Заголовок формы */
+.blue-header {
+    color: #0066cc;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+/* Красное предупреждение */
+.warning-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    animation: blink 2s infinite;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Анимация для предупреждения */
+@keyframes blink {
+    0% { opacity: 1; background-color: transparent; }
+    50% { opacity: 0.8; background-color: #ffebee; }
+    100% { opacity: 1; background-color: transparent; }
+}
+
+/* Телефон (красный) */
+.phone-number {
+    color: red;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Карточка формы */
+.form-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: none;
+}
+
+.form-card .card-header {
+    background-color: #28a745;
+    color: white;
+    border-radius: 10px 10px 0 0 !important;
+}
+
+/* Поля формы */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.required-field:after {
+    content: " *";
+    color: red;
+}
+
+/* Кнопка отправки */
+.btn-submit {
+    background-color: #0066cc;
+    color: white;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #004999;
+}
+
+/* Сообщение об успехе */
+.success-header {
+    background-color: #28a745;
+    color: white;
+}
+
+.success-number {
+    color: #0066cc;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .blue-header {
+        font-size: 1.5rem;
+    }
+    
+    .phone-number {
+        font-size: 2rem;
+    }
+}
